@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(61, 114, 228);
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+
+form>button {
+    visibility: hidden;
+}
+
+input {
+    font-size: large;
+    padding: 15px 40px;
+    min-width: 500px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: rgb(22, 176, 223);
+    padding: 10px 15px;
+    color: white;
+    position: relative;
+    left: 47%;
+}
