@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const SearchBar = ({ onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
@@ -9,7 +10,14 @@ const SearchBar = ({ onSubmit }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
+    if (!inputValue.trim()) {
+      toast.error('Please enter a search term.');
+      return;
+    }
+
     onSubmit(inputValue);
+    setInputValue('');
   };
 
   return (
